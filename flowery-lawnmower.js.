@@ -1,0 +1,48 @@
+function setup() {
+  createCanvas(800, 800);
+  colorMode(HSB);
+}
+
+var x = 50;
+var h = 400;
+
+
+
+
+function draw() {
+  
+  stroke(random(60, 200), 140, 90);
+  
+  line(x, height-10, x+random(-40, 30), height-20-random(h));
+  noStroke();
+  
+  
+  
+ 
+  x = x + 3;
+  
+
+  if (x > width) {
+    x = random(30);
+    h = h + 6;
+   
+  }
+ 
+  
+
+  if (h > 100) {
+    fill(30,330,10);
+    rect(0, 0, width, height-15);
+    h = 20;
+  }
+  
+  if (h > 50) {
+    fill(30,330,10);
+    circle(0, 0, width);
+    h = 20;
+  }
+  if (h > 49) {
+    fill(30,330,110);
+    ellipse(400, 725, 50,50);
+  }
+}
